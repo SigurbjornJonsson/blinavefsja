@@ -32,7 +32,7 @@ nav {
     /* justify-content: space-around; */
     align-items: center;
     height: 10vh;
-    min-height: 80px;
+    /* min-height: 80px; */
     position: relative;
 }
 
@@ -41,13 +41,18 @@ nav a {
 }
 
 .titill {
-    color: rgba(30, 160, 121, 1);
-    font-size: 45px;
+    color: rgba(5, 73, 41, 1);
+    font-size: 30px;
     letter-spacing: 2px;
     font-weight: 600;
     position: absolute;
-    top: 25px;
-    left: 100px;
+    top: 35px;
+    /* left: 50%;
+    right: 50%; */
+    /* margin-top: -100px;
+    margin-left: -100px; */
+    width: 100%;
+    text-align: center;
 }
 
 /* .nav_boxes {
@@ -70,7 +75,7 @@ nav a {
     cursor: pointer;
     position: absolute;
     top: 25px;
-    right: 100px;
+    right: 40px;
 }
 
 .hjalp:hover{
@@ -88,7 +93,7 @@ nav a {
     position: absolute;
     /* transform: rotate(90deg); */
     top: 25px;
-    right: 150px;
+    right: 90px;
     align-content: center;
 }
 
@@ -105,7 +110,7 @@ nav a {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     top: 65px;
-    right: 150px;
+    right: 90px;
 }
 
 .meira-content a {
@@ -210,13 +215,16 @@ nav a {
 .athugasemd_container {
     /* background-color: whitesmoke; */
     /* height: 80px; */
-    height: 10vh;
+    /* height: 10vh;
     min-height: 50px;
-    width: 100vw;
+    width: 100vw; */
     text-align: center;
     position: relative;
     /* background-image: linear-gradient(white, white, rgba(5, 73, 41, 0.1)); */
     background-color: white;
+    /* top: 25px;
+    left: 50px; */
+    z-index: 99;
 }
 
 .athugasemd_btn {
@@ -230,9 +238,10 @@ nav a {
     cursor: pointer;
     letter-spacing: 1px;
     padding: 10px;
-    width: 388px;
-    top: 5px;
-    left: 100px;
+    width: 272px;
+    height: 40px;
+    top: 25px;
+    left: 40px;
     animation-name: aths_anim;
     animation-duration: 4s;
     animation-delay: 0.25s;
@@ -258,7 +267,7 @@ nav a {
 
 .kort_container {
     position: relative;
-    height: 80vh;
+    height: 90vh;
     width: 100vw;
     border-color: rgba(5, 73, 41, 0.75);
     border-width: 2px;
