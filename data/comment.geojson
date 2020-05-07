@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "comment",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
+"features": [
+{ "type": "Feature", "properties": { "nafn": "Haraldur Jónsson", "comment": "Mörg börn fara um þetta svæði. Þarf að huga vel að merkingum." }, "geometry": { "type": "Point", "coordinates": [ -2440481.357200412545353, 9378099.290059065446258 ] } },
+{ "type": "Feature", "properties": { "nafn": "Guðrún Ólafsdóttir", "comment": "Hef áhyggjur af hávaðamengun. Hversu margir vagnar munu bruna hér framhjá á hverjum klukkutíma?" }, "geometry": { "type": "Point", "coordinates": [ -2443042.825168846640736, 9386288.286942323669791 ] } },
+{ "type": "Feature", "properties": { "nafn": "Guðrún Ólafsdóttir", "comment": "Hef áhyggjur af hávaðamengun. Hversu margir vagnar munu bruna hér framhjá á hverjum klukkutíma?" }, "geometry": { "type": "Point", "coordinates": [ -2440042.825168846640736, 9386288.286942323669791 ] } }
+]
+}

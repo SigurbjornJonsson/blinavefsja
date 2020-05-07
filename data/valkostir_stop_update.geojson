@@ -1,0 +1,9 @@
+{
+"type": "FeatureCollection",
+"name": "valkostir_stop_update",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "stopp_name": "Vísindagarðar", "quad": "6" }, "geometry": { "type": "Point", "coordinates": [ -2443223.051821401808411, 9384758.843111474066973 ] } },
+{ "type": "Feature", "properties": { "id": 2, "stopp_name": "HÍ", "quad": "3" }, "geometry": { "type": "Point", "coordinates": [ -2443411.495394885074347, 9385825.624496316537261 ] } }
+]
+}

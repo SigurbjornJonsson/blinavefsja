@@ -1,0 +1,1119 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    width:100%;
+    height:100%;
+}
+
+body{
+    width:100%;
+    max-width: 100%;
+    height:100%;
+    margin: 0;
+    padding: 0;
+    /* background-color: rgb(230, 231, 230); */
+    
+    /* background-color: rgb(30, 160, 121, 1); Blinu liturinn! */
+    background-color: white;
+    /* background-image: linear-gradient(rgb(152, 170, 159), rgb(230, 230, 230), rgb(152, 170, 159)); */
+    font-family: sans-serif;
+    justify-content: center;
+    overflow-x: hidden;
+
+    
+}
+
+nav {
+    /* display: flex; */
+    width: 100vw;
+    background-color: white;
+    /* justify-content: space-around; */
+    align-items: center;
+    height: 10vh;
+    min-height: 80px;
+    position: relative;
+}
+
+nav a {
+    font-weight: bold;
+}
+
+.titill {
+    color: rgba(30, 160, 121, 1);
+    font-size: 45px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    position: absolute;
+    top: 25px;
+    left: 100px;
+}
+
+/* .nav_boxes {
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
+    position: absolute;
+    top: 25px;
+    right: 100px;
+} */
+
+.hjalp {
+    background-color: rgba(30, 160, 121, 0.9);
+    color: whitesmoke;
+    width: 40px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 100px;
+}
+
+.hjalp:hover{
+    background-color: rgb(35, 117, 92);
+}
+.meira {
+    background-color: rgba(30, 160, 121, 0.9);
+    color: whitesmoke;
+    width: 232px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    /* transform: rotate(90deg); */
+    top: 25px;
+    right: 150px;
+    align-content: center;
+}
+
+.meira:hover{
+    background-color: rgb(35, 117, 92);
+}
+
+
+.meira-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(30, 160, 121, 0.9);;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 65px;
+    right: 150px;
+}
+
+.meira-content a {
+    color: whitesmoke;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+
+.meira-content a:hover {
+    background-color: rgb(35, 117, 92);
+    color: whitesmoke;
+}
+
+
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal_meginmal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+     /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.7); /*Black w/ opacity */
+}
+
+/* Modal Content */
+.modal_meginmal_content {
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 20px;
+    border: 3px solid rgb(5, 73, 41);
+    border-radius: 1%;
+    width: 60%;
+}
+
+.p1 {
+    color: rgb(90, 90, 90);;
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.p2 {
+    color: rgb(90, 90, 90);;
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+/* The Close Button */
+.modal_close {
+    color: rgba(30, 160, 121, 0.9);
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.modal_close:hover,
+.modal_close:focus {
+    color: rgb(35, 117, 92);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.meira_innan_modal {
+    background-color: rgba(30, 160, 121, 0.9);
+    color: whitesmoke;
+    width: 40px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    /* cursor: pointer; */
+    /* position: absolute; */
+    transform: rotate(90deg);
+    align-content: center;
+}
+
+
+
+
+
+
+
+
+.athugasemd_container {
+    /* background-color: whitesmoke; */
+    /* height: 80px; */
+    height: 10vh;
+    min-height: 50px;
+    width: 100vw;
+    text-align: center;
+    position: relative;
+    /* background-image: linear-gradient(white, white, rgba(5, 73, 41, 0.1)); */
+    background-color: white;
+}
+
+.athugasemd_btn {
+    position: absolute;
+    background-color: rgba(30, 160, 121, 1);
+    color: whitesmoke;
+    border: none;
+    border-radius: 2%;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    padding: 10px;
+    width: 388px;
+    top: 5px;
+    left: 100px;
+    animation-name: aths_anim;
+    animation-duration: 4s;
+    animation-delay: 0.25s;
+}
+
+/* @keyframes aths_anim {
+    0% {top: 5px; left: -300px;}
+    100% {top: 5px; left: 100px;}
+} */
+
+@keyframes aths_anim {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.athugasemd_btn:hover{
+    background-color: rgb(35, 117, 92);
+}
+
+
+
+
+
+.kort_container {
+    position: relative;
+    height: 80vh;
+    width: 100vw;
+    border-color: rgba(5, 73, 41, 0.75);
+    border-width: 2px;
+    border-style: solid;
+}
+
+.skyringartakki {
+    position: absolute;
+    background-color: rgba(30, 160, 121, 1);
+    color: whitesmoke;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    /* padding: 6px; */
+    top: 10px;
+    left: 90px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    transform: rotate(270deg);
+}
+
+.skyringartakki:hover{
+    background-color: rgb(35, 117, 92);
+}
+
+.grunnkort {
+    position: absolute;
+    background-color: rgba(30, 160, 121, 1);
+    color: whitesmoke;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px;
+    top: 10px;
+    left: 40px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    word-wrap: break-word;
+    margin: auto;
+}
+
+.grunnkort:hover{
+    background-color: rgb(35, 117, 92);
+}
+
+
+
+.skyringarbox2{
+    position: absolute;
+    z-index: 1;
+    display: none;
+    border-color: rgb(5, 73, 41);
+    /* background-color: rgb(212, 218, 220); */
+    background-color: whitesmoke;
+    /* border-color: white; */
+    border-width: 2px;
+    border-style: solid;
+    /* justify-content: center;
+    margin-right: 5px;
+    margin-left: 5px; */
+    /* border-radius: 2%; */
+    /* text-align: auto; */
+    /* align-content: center;
+    place-content: center; */
+    font-family: sans-serif;
+    top: 5px;
+    left: 85px;
+    width: 300px;
+}
+
+
+.sk-b-head{
+    /* color: white; */
+    /* color: rgb(30, 160, 121, 1); */
+    color: rgb(5, 73, 41);
+    font-size: 20px;
+    font-family: sans-serif;
+    justify-content: center;
+    margin-left: 10%;
+    line-height: 200%;
+    letter-spacing: 2px;
+}
+
+
+.skyringar{
+    /* color: rgb(7, 73, 10); */
+    /* color: white; */
+    /* color: rgb(30, 160, 121, 1); */
+    color: rgb(5, 73, 41);
+}
+
+.sk_img {
+    display: none;
+    height: auto;
+    width: 80%;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+.button-explain1{
+    visibility: hidden;
+    border-style: solid;
+    border-color: rgba(59, 250, 161, 1);
+    background-color: rgba(59, 250, 161, 0.6);
+    color: black;
+    border-radius: 2%;
+    position: absolute;
+    z-index: 1;
+    top: 1%;
+    right: 1%;
+    font-family: sans-serif;
+    padding: 1%;
+    font-size: 20px;
+    width: 35%;
+}
+
+.button-explain2{
+    visibility: hidden;
+    border-style: solid;
+    border-color: rgba(231, 235, 22, 1);
+    background-color: rgba(231, 235, 22, 0.6);
+    color: black;
+    border-radius: 2%;
+    position: absolute;
+    z-index: 1;
+    top: 1%;
+    right: 1%;
+    font-family: sans-serif;
+    padding: 1%;
+    font-size: 20px;
+    width: 35%;
+}
+
+.button-explain3{
+    visibility: hidden;
+    border-style: solid;
+    border-color: rgba(5, 73, 41, 1);
+    background-color: rgba(5, 73, 41, 0.6);
+    color: white;
+    border-radius: 2%;
+    position: absolute;
+    z-index: 1;
+    top: 1%;
+    right: 1%;
+    font-family: sans-serif;
+    padding: 1%;
+    font-size: 20px;
+    width: 35%;
+}
+
+.button-explain4{
+    visibility: hidden;
+    border-style: solid;
+    border-color: rgba(230, 65, 208, 1);
+    background-color: rgba(230, 65, 208, 0.6);
+    color: white;
+    border-radius: 2%;
+    position: absolute;
+    z-index: 1;
+    top: 1%;
+    right: 1%;
+    font-family: sans-serif;
+    padding: 1%;
+    font-size: 20px;
+    width: 35%;
+}
+
+.button-explain5{
+    visibility: hidden;
+    border-style: solid;
+    border-color: rgba(228, 6, 6, 1);
+    background-color: rgba(228, 6, 6, 0.6);
+    color: white;
+    border-radius: 2%;
+    position: absolute;
+    z-index: 1;
+    top: 1%;
+    right: 1%;
+    font-family: sans-serif;
+    padding: 1%;
+    font-size: 20px;
+    width: 35%;
+}
+
+.button-explain6{
+    visibility: hidden;
+    border-style: solid;
+    border-color: rgba(32, 121, 180, 1);
+    background-color: rgba(32, 121, 180, 0.6);
+    color: white;
+    border-radius: 2%;
+    position: absolute;
+    z-index: 1;
+    top: 1%;
+    right: 1%;
+    font-family: sans-serif;
+    padding: 1%;
+    font-size: 20px;
+    width: 35%;
+}
+.btn-close1{
+    background-color: rgb(201, 201, 201);
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-weight: bold;
+}
+
+.btn-close2{
+    background-color: rgb(201, 201, 201);
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-weight: bold;
+}
+
+.btn-close3{
+    background-color: rgb(201, 201, 201);
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-weight: bold;
+}
+
+.btn-close4{
+    background-color: rgb(201, 201, 201);
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-weight: bold;
+}
+
+.btn-close5{
+    background-color: rgb(201, 201, 201);
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-weight: bold;
+}
+
+.btn-close6{
+    background-color: rgb(201, 201, 201);
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-weight: bold;
+}
+/* Button below map */
+
+.is-grouped{
+    visibility: hidden;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 3;
+    width: 100%;
+    
+    /* margin: 2%;
+    position: absolute;
+    bottom: 5%; */
+}
+
+/* .is-grouped button{
+    float: left;
+} */
+
+.is-grouped button {
+    color: black;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: sans-serif;
+    border: gray;
+    border-width: 1px;
+    margin-left: 4px;
+    cursor: pointer;
+    /* word-wrap: normal;
+    width: 150px;
+    height: auto; */
+}
+
+.is-grouped button:hover{
+    transform: translateY(-2px);
+}
+
+.buttontest{
+    /* background-color: rgba(32, 121, 180, 0.6); */
+    background-color: rgba(59, 250, 161, 0.6);
+}
+
+.buttontest2{
+    /* background-color: rgba(228, 6, 6, 0.6); */
+    background-color: rgba(231, 235, 22, 0.6);
+}
+
+.buttontest3{
+    /* background-color: rgba(230, 65, 208, 0.6); */
+    background-color: rgba(5, 73, 41, 0.6);
+}
+
+.buttontest4{
+    /* background-color: rgba(5, 73, 41, 0.6); */
+    background-color: rgba(230, 65, 208, 0.6);
+}
+
+.buttontest5{
+    /* background-color: rgba(231, 235, 22, 0.6); */
+    background-color: rgba(228, 6, 6, 0.6);
+}
+
+.buttontest6{
+    /* background-color: rgba(59, 250, 161, 0.6); */
+    background-color: rgba(32, 121, 180, 0.6);
+}
+
+
+
+
+
+/* The Modal (background) */
+.modal_athugasemd {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+     /* Fallback color */
+    background-color: rgba(0,0,0, 0.7); /*Black w/ opacity */
+}
+
+/* Modal Content */
+.modal_athugasemd_content {
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 20px;
+    border: 3px solid rgb(5, 73, 41);
+    border-radius: 1%;
+    width: 60%;
+}
+
+
+.p2 {
+    color: rgb(90, 90, 90);;
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: lighter;
+}
+
+ul {
+    color: rgb(90, 90, 90);;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.ath_adgerd {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.ath_cancel {
+    background-color: rgba(111, 112, 112, 0.9);
+    color: whitesmoke;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.ath_cancel:hover {
+    background-color: rgba(88, 88, 88, 0.9);
+}
+
+.ath_afram {
+    background-color: rgba(30, 160, 121, 0.9);
+    color: whitesmoke;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.ath_afram:hover {
+    background-color: rgb(35, 117, 92);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* #js-map .ol-attribution{
+    background-color: rgba(10, 102, 56, 0.75);
+    color: green;
+} */
+
+#js-map .ol-zoom{
+    visibility: hidden;
+}
+/* #js-map .ol-zoom .ol-zoom-out {
+    background-color: rgb(11, 90, 18);
+    color: white;
+}
+
+#js-map .ol-zoom .ol-zoom-in {
+    background-color: rgb(11, 90, 18);
+    color: white;
+}
+
+#js-map .ol-attribution{
+    background-color: rgba(11, 90, 18, 0.5);
+    color: white;
+} */
+
+#js-map .ol-zoomslider {
+    top: 8px;
+    left: 8px;
+    right: auto;
+    background-color: rgba(10, 102, 56, 0.2);
+    width: 15px;
+    height: 75px;
+    padding: 0;
+    box-shadow: 0 0 5px rgb(4, 109, 48);
+    border-radius: 20px;
+}
+
+#js-map .ol-zoomslider:hover {
+    background-color: rgba(14, 150, 66, 0.3);
+}
+
+#js-map .ol-zoomslider-thumb {
+    height: 15px;
+    width: 15px;
+    margin: 0;
+    filter: none;
+    background-color: rgba(7, 97, 47, 0.6);
+    border-radius: 20px;
+}
+#js-map a.ol-zoomslider-handle:hover {
+    background-color: rgba(255,69,0,0.7);
+}
+
+
+
+
+
+
+
+
+
+.modal_form {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+     /* Fallback color */
+    background-color: rgba(0,0,0, 0.7); /*Black w/ opacity */
+}
+
+
+.form-popup {
+    display: none;
+    position: absolute;
+    /* bottom: 30%;
+    right: 30%; */
+    left: 10%;
+    right: 10%;
+    margin: auto;
+    top: 2%;
+    /* bottom: 2%; */
+    /* width: 1000px; */
+    border: 3px solid rgb(7, 97, 47);
+    z-index: 9;
+    /* background-color: rgba(7, 97, 47, 0.8); */
+    background-color: rgb(204, 204, 204);
+    color: rgba(30, 160, 121, 1);
+
+    padding: 20px;
+    border: 3px solid rgb(5, 73, 41);
+    border-radius: 1%;
+    width: 60%;
+}
+
+.form-popup p{
+    color: rgb(71, 70, 70);
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.form-popup label {
+    font-weight: bold;
+}
+  
+  /* Add styles to the form container */
+.form-container {
+    max-width: 900px;
+    max-height: 900px;
+    padding: 10px;
+    margin: auto;
+    /* background-color: rgba(7, 97, 47, 0.6); */
+}
+
+.form-container input[type=text]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background:whitesmoke;
+}
+
+.form-container input[type=email]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background:whitesmoke;
+}
+
+.form-container .btn {
+    background-color: rgb(4, 109, 48);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 49%;
+    margin-bottom:10px;
+    opacity: 0.8;
+    font-weight: bolder;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: rgb(71, 70, 70);
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover {
+    opacity: 1;
+}
+
+#txtbox{
+    height: 100px;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background:whitesmoke;
+}
+
+.btn_stadsetning {
+    background-color: rgba(30, 160, 121, 1);
+    color: white;
+    padding: 10px 12px;
+    border: none;
+    cursor: pointer;
+    /* width: 49%; */
+    margin-bottom:10px;
+    opacity: 0.8;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+
+
+
+.kort_container2 {
+    position: relative;
+    display: none;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    height: 200px;
+    width: 200px;
+    border-color: rgba(5, 73, 41, 0.75);
+    border-width: 2px;
+    border-style: solid;
+}
+
+
+
+/* .start-takki{
+    display: block;
+    width: 50%;
+    border: none;
+    align-items: center;
+    background-color: rgb(8, 145, 187);
+    color: white;
+    padding: 14px 28px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bolder;
+    margin-left: 25%;
+}
+
+.start-takki:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+.takki{
+    text-align: center;
+}
+ */
+
+
+
+@media screen and (max-width: 1024px) {
+    .titill {
+        font-size: 35px;
+        left: 50px;
+    }
+
+    .hjalp {
+        
+        font-size: 18px;
+        right: 50px;
+        
+    }
+    
+
+    
+    .meira {
+        
+        font-size: 18px;
+        right: 100px;
+        
+    }
+
+    .meira-content {
+        right: 100px;
+    }
+    .athugasemd_btn {
+        position: absolute;
+        background-color: rgba(30, 160, 121, 1);
+        color: whitesmoke;
+        border: none;
+        border-radius: 2%;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        letter-spacing: 1px;
+        padding: 10px;
+        width: 305px;
+        top: 5px;
+        left: 50px;
+        animation-name: aths_anim;
+        animation-duration: 2s;
+        animation-delay: 0.25s;
+    }
+
+
+    @keyframes aths_anim {
+        0% {top: 5px; left: -300px;}
+        100% {top: 5px; left: 50px;}
+    }
+
+    .skyringar {
+        font-size: 26px;
+    }
+
+    .p1 {
+        color: rgb(90, 90, 90);;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .p2 {
+        color: rgb(90, 90, 90);;
+        font-family: sans-serif;
+        font-size: 20px;
+        font-weight: lighter;
+    }
+
+    .sk-b-head{
+        /* color: white; */
+        /* color: rgb(30, 160, 121, 1); */
+        color: rgb(5, 73, 41);
+        font-size: 16px;
+        font-family: sans-serif;
+        justify-content: center;
+        margin-left: 10%;
+        line-height: 200%;
+        letter-spacing: 2px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .titill {
+        font-size: 25px;
+    }
+
+    .hjalp {
+
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    
+    }
+    
+
+    
+    .meira {
+        
+        height: 30px;
+      
+        font-size: 16px;
+     
+    }
+
+    .meira-content {
+     
+        top: 55px;
+  
+    }
+    .athugasemd_btn {
+        position: absolute;
+        background-color: rgba(30, 160, 121, 1);
+        color: whitesmoke;
+        border: none;
+        border-radius: 2%;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        letter-spacing: 1px;
+        padding: 10px;
+        width: 230px;
+        top: 5px;
+        left: 50px;
+        animation-name: aths_anim;
+        animation-duration: 2s;
+        animation-delay: 0.25s;
+    }
+
+
+    @keyframes aths_anim {
+        0% {top: 5px; left: -300px;}
+        100% {top: 5px; left: 50px;}
+    }
+
+    .skyringar {
+        font-size: 22px;
+    }
+
+    .p1 {
+        color: rgb(90, 90, 90);;
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .p2 {
+        color: rgb(90, 90, 90);;
+        font-family: sans-serif;
+        font-size: 18px;
+        font-weight: lighter;
+    }
+
+    .sk-b-head{
+        /* color: white; */
+        /* color: rgb(30, 160, 121, 1); */
+        color: rgb(5, 73, 41);
+        font-size: 14px;
+        font-family: sans-serif;
+        justify-content: center;
+        margin-left: 10%;
+        line-height: 200%;
+        letter-spacing: 2px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

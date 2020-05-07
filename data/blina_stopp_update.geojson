@@ -1,0 +1,31 @@
+{
+"type": "FeatureCollection",
+"name": "blina_stopp_update",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
+"features": [
+{ "type": "Feature", "properties": { "stopp_legg": 1, "stopp_name": "Hamraborg", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2438751.201841302681714, 9377964.564885348081589 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 1, "stopp_name": "Kópavogslaug", "quad": "1" }, "geometry": { "type": "Point", "coordinates": [ -2439814.888510230928659, 9378054.77656689286232 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 1, "stopp_name": "Stelluróló", "quad": "1" }, "geometry": { "type": "Point", "coordinates": [ -2441484.963095208629966, 9378107.632743129506707 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 1, "stopp_name": "Kársnes", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2442219.836072403471917, 9379077.212283696979284 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 2, "stopp_name": "HR", "quad": "8" }, "geometry": { "type": "Point", "coordinates": [ -2441142.026939967647195, 9381379.322360834106803 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 2, "stopp_name": "Öskjuhlíð", "quad": "5" }, "geometry": { "type": "Point", "coordinates": [ -2441212.123169609345496, 9382593.331207888200879 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 2, "stopp_name": "Hlíðarendi", "quad": "8" }, "geometry": { "type": "Point", "coordinates": [ -2440840.948954958934337, 9383875.466905934736133 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 2, "stopp_name": "Landspítalinn", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2440734.475929814856499, 9384716.355575520545244 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 3, "stopp_name": "BSÍ", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2441768.223927839659154, 9385018.727370761334896 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 3, "stopp_name": "HÍ", "quad": "5" }, "geometry": { "type": "Point", "coordinates": [ -2443122.647179123014212, 9385954.36905494146049 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 4, "stopp_name": "Tjörnin", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2442362.576526691671461, 9386263.693609839305282 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 4, "stopp_name": "Lækjartorg", "quad": "1" }, "geometry": { "type": "Point", "coordinates": [ -2441882.487278896849602, 9387328.485672973096371 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 4, "stopp_name": "Smiðjustígur", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2441262.168546345550567, 9387107.345170190557837 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 4, "stopp_name": "Frakkastígur", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2440433.338431259617209, 9386726.77485454455018 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 4, "stopp_name": "Hlemmur", "quad": "7" }, "geometry": { "type": "Point", "coordinates": [ -2439522.014496879186481, 9386344.11850967630744 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 4, "stopp_name": "Katrínartún", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2438711.64412712585181, 9386140.807084698230028 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 5, "stopp_name": "Hátún", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2437688.739682358689606, 9385677.897441459819674 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 5, "stopp_name": "Lágmúli", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2436752.656749454792589, 9385455.440757915377617 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 5, "stopp_name": "Höllin", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2435611.802099936176091, 9385157.429426316171885 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 5, "stopp_name": "Skeifan", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2434557.586335903033614, 9383838.496605845168233 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 5, "stopp_name": "Mörkin", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2433652.509134829510003, 9382829.787762224674225 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 6, "stopp_name": "Vogabyggð", "quad": "1" }, "geometry": { "type": "Point", "coordinates": [ -2432250.566085271071643, 9382101.990867359563708 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 6, "stopp_name": "Elliðaárvogur", "quad": "7" }, "geometry": { "type": "Point", "coordinates": [ -2430892.047154964879155, 9382153.017128437757492 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 6, "stopp_name": "Ártúnshöfði", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2429574.611846433021128, 9382525.140981281176209 ] } }
+]
+}
