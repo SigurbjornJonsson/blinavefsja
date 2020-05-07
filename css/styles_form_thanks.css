@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    width:100%;
+    height:100%;
+}
+
+body{
+    width:100%;
+    height:100%;
+    margin-top: 50px;
+    padding: 0;
+    /* background-color: rgb(230, 231, 230); */
+    
+    /* background-color: rgb(30, 160, 121, 1); Blinu liturinn! */
+    background-color: white;
+    /* background-image: linear-gradient(rgb(152, 170, 159), rgb(230, 230, 230), rgb(152, 170, 159)); */
+    font-family: sans-serif;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.skilabod {
+    text-align: center;
+}
+
+h2 {
+    color: rgba(30, 160, 121, 1);
+    font-size: 45px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+h3 {
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    background-color: rgba(30, 160, 121, 1);
+    color: whitesmoke;
+    border: none;
+    border-radius: 2%;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    padding: 10px;
+    width: 388px;
+}

@@ -840,6 +840,10 @@ ul {
     background:whitesmoke;
 }
 
+#form_checkbox {
+    color: rgb(71, 70, 70);
+}
+
 .btn_stadsetning {
     background-color: rgba(30, 160, 121, 1);
     color: white;
