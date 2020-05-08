@@ -14,163 +14,175 @@
 
 <body>
 
+    <div class="wrapper">
+        <nav class="header">
+            <div class="athugasemd_container">
+                <button class="athugasemd_btn" onclick="ath_afram()">Senda Athugasemd</button>
+            </div>
+            <div class="titill">Borgarlínan 1. lota</div>
+            <!-- <div class="nav_boxes"> -->
+            <button class="meira" id="meira" onclick="syna_meira_content()">Drög að matsáætlun</button>
+            <button class="hjalp" id="hjalp">?</button>
+            <div class="meira-content" id="meira-content">
+                <a href="Drog_matsaaetlun_Borgarlinan.pdf" target="_blank">Matsáætlun (skýrsla)</a>
+                <a href="https://www.borgarlinan.is/" target="_blank">Heimasíða Borgarlínunnar</a>
+                <!-- <a href="#">English <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="flag" width="25"></a> -->
+            </div>
+            <!-- </div> -->
+        </nav>
 
-    <nav class="header">
-        <div class="athugasemd_container">
-            <button class="athugasemd_btn" onclick="ath_afram()">Senda Athugasemd</button>
-        </div>
-        <div class="titill">Borgarlínan 1. lota</div>
-        <!-- <div class="nav_boxes"> -->
-        <button class="meira" id="meira" onclick="syna_meira_content()">Drög að matsáætlun</button>
-        <button class="hjalp" id="hjalp">?</button>
-        <div class="meira-content" id="meira-content">
+        <button class="menu_small" id="menu_small" onclick="syna_menu_small_content()">lll</button>
+        <div class="menu_small_content" id="menu_small_content">
+            <a href="#" id="menu_small_um">Um</a>
             <a href="Drog_matsaaetlun_Borgarlinan.pdf" target="_blank">Matsáætlun (skýrsla)</a>
-            <a href="https://www.borgarlinan.is/" target="_blank">Heimasíða Borgarlínunnar</a>
-            <!-- <a href="#">English <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="flag" width="25"></a> -->
+            <a href="https://www.borgarlinan.is/" target="_blank">Heimasíða Borgarlínunnar</a> 
         </div>
-        <!-- </div> -->
-    </nav>
 
-    <div class="modal_meginmal" id="modal_meginmal">
-        <div class="modal_meginmal_content">
-            <span class="modal_close">x</span>
-            <p class="p1">Velkomin á vefsjá Borgarlínunnar - mat á umhverfisáhrifum.</p>
-            <p class="p2">Kortið hér að neðan sýnir legu á 1. lotu Borgarlínunnar ásamt staðsetningu stoppistöðva. Í skýringum er hægt að virkja upplýsingar til birtingar á kortinu.</p>
-            <p class="p2"> Nú stendur yfir kynningartími á drögum að matsáætlun sem er fyrsti fasinn í mati á umverfisáhrifum. Þau sem láta sig málið varðar eru hvött til að senda inn ábendingu um fyrirhugaða nálgun á mati á umhverfisáhrifum Borgarlínunnar. Frestur til athugasemda er til 6. júní 2020.
+        <div class="modal_meginmal" id="modal_meginmal">
+            <div class="modal_meginmal_content">
+                <span class="modal_close">x</span>
+                <p class="p1">Velkomin á vefsjá Borgarlínunnar - mat á umhverfisáhrifum.</p>
+                <p class="p2">Kortið hér að neðan sýnir legu á 1. lotu Borgarlínunnar ásamt staðsetningu stoppistöðva. Í skýringum er hægt að virkja upplýsingar til birtingar á kortinu.</p>
+                <p class="p2"> Nú stendur yfir kynningartími á drögum að matsáætlun sem er fyrsti fasinn í mati á umverfisáhrifum. Þau sem láta sig málið varðar eru hvött til að senda inn ábendingu um fyrirhugaða nálgun á mati á umhverfisáhrifum Borgarlínunnar. Frestur til athugasemda er til 6. júní 2020.
 
-                Ítarlegri upplýsingar um framkvæmd, forsendur hennar og markmið, helstu verkþætti, nálgun matsvinnu og rannsóknaráætlun er að finna í drögum að matsáætlun. Hana er hægt að nálgast með því að smella á "Drög að matsáætlun" efst í hægra horni þessarar síðu.</p>
-        </div>
-    </div>
-
-
-    <!-- <div class="athugasemd_container">
-        <button class="athugasemd_btn" onclick="ath_afram()">Senda Athugasemd</button>
-    </div> -->
-
-
-
-    <div class="kort_container" id="js-map">
-
-        <button class="skyringartakki" id="skyringartakki" onclick="syna_skyringarbox()">iii</button>
-        
-
-        <div id='skyringarbox2' class="skyringarbox2">
-            <h1 class="skyringar" style="text-align: center;">&nbsp; Skýringar</h1>
-            <div class="sk-b-head">
-                <input class="sk-b" type="checkbox" name="baseLayerRadioButton" id="BorgarlinaBuffer" value="BorgarlinaBuffer" onclick="blina_onclick()"> Borgarlínuleggir<br>
-                <input class="sk-b" type="checkbox" name="baseLayerRadioButton" id="stadhaettir" value="stadhaettir" onclick="sthr()"> Staðhættir<br>
-                <div class="sk_img" id="kk_img"><img src="img/kk_sk.png" alt="" width="100%"></div>
-                <input class="sk-b" type="checkbox" name="baseLayerRadioButton" id="verndarsvaedi" value="verndarsvaedi" onclick="vrsv()"> Verndarsvæði<br>
-                <div class="sk_img" id="vs_img"><img src="img/vs_sk.png" alt="" width="100%"></div>
-                <input class="sk-b" type="checkbox" name="baseLayerRadioButton" id="valkostagreining" value="valkostagreining" onclick="vkgr_test()"> Valkostagreining<br>
-                <div class="sk_img" id="vg_img"><img src="img/vg_sk.png" alt="" width="100%"></div><br>
-                <input class="sk-b" type="checkbox" name="baseLayerRadioButton" id="comment_sk" value="comment_sk" onclick="comment_test()"> Sýna athugasemdir<br>
+                    Ítarlegri upplýsingar um framkvæmd, forsendur hennar og markmið, helstu verkþætti, nálgun matsvinnu og rannsóknaráætlun er að finna í drögum að matsáætlun. Hana er hægt að nálgast með því að smella á "Drög að matsáætlun" efst í hægra horni þessarar síðu.</p>
             </div>
         </div>
 
-        <button class="grunnkort" id="grunnkort" onclick="syna_grunnkort()"><img src="img/map_switch.svg" alt="flag" width="30"></button>
 
-        <div id="button-explain1" class="button-explain1">
-            <button id="btn-close1" class="btn-close1">x</button><br>
-            <strong>Höfðinn-Sæbraut</strong><br><br>
-            Liggur frá Ártúnshöfða og á brú yfir Elliðaárvog og Sæbraut. <br><br>
-            Lengd: 1,8 km <br>
-        </div>
-        <div id="button-explain2" class="button-explain2">
-            <button id="btn-close2" class="btn-close2">x</button><br>
-            <strong>Sæbraut-Suðurlandsbraut-Laugavegur</strong><br><br>
-            Liggur frá Sæbraut, Suðurlandsbraut og Laugaveg að Katrínartúni. <br><br>
-            Lengd: 3,45 km <br>
-        </div>
-        <div id="button-explain3" class="button-explain3">
-            <button id="btn-close3" class="btn-close3">x</button><br>
-            <strong>Laugavegur-HÍ</strong><br><br>
-            Liggur frá Katrínartúni, um Hlemm, Hverfisgötu, Lækjargötu, Fríkirkjuveg, Skothúsveg og Suðurgötu að Melatorgi. <br><br>
-            Lengd: 2,35 km <br>
-        </div>
-        <div id="button-explain4" class="button-explain4">
-            <button id="btn-close4" class="btn-close4">x</button><br>
-            <strong>HÍ-Landspítalinn</strong><br><br>
-            Liggur frá Melatorgi, Hringbraut að BSÍ og Burknagötu að nýja meðferðarkjarnanum. <br><br>
-            Lengd: 1,3 km <br>
-        </div>
-        <div id="button-explain5" class="button-explain5">
-            <button id="btn-close5" class="btn-close5">x</button><br>
-            <strong>Landspítalinn-HR</strong><br><br>
-            Liggur frá nýja meðferðarkjarnanum, Snorrabraut, Arnarhlíð, Nauthólsveg og að Fossvogsbrú. <br><br>
-            Lengd: 2,15 km <br>
-        </div>
-        <div id="button-explain6" class="button-explain6">
-            <button id="btn-close6" class="btn-close6">x</button><br>
-            <strong>Kársnes-Hamraborg</strong><br><br>
-            Liggur frá Fossvogsbrú á Kársnesi, Bakkabraut, Borgarholtsbraut að Hamraborg. <br><br>
-            Lengd: 1,9 km <br>
-        </div>
-        <div class="is-grouped" id="is-grouped">
-            <button id="buttontest" class="buttontest" onclick="zoomToLegOne()">Höfðinn-Sæbraut</button>
-            <button id="buttontest2" class="buttontest2" onclick="zoomToLegTwo()">Sæbraut-Suðurlandsbraut-Laugavegur</button>
-            <button id="buttontest3" class="buttontest3" onclick="zoomToLegThree()">Laugavegur-HÍ</button>
-            <button id="buttontest4" class="buttontest4" onclick="zoomToLegFour()">HÍ-Landspítalinn</button>
-            <button id="buttontest5" class="buttontest5" onclick="zoomToLegFive()">Landspítalinn-HR</button>
-            <button id="buttontest6" class="buttontest6" onclick="zoomToLegSix()">Kársnes-Hamraborg</button>
-        </div>
-
-    </div>
+        <!-- <div class="athugasemd_container">
+            <button class="athugasemd_btn" onclick="ath_afram()">Senda Athugasemd</button>
+        </div> -->
 
 
 
+        <div class="kort_container" id="js-map">
 
-    <div class="modal_athugasemd" id="modal_athugasemd">
-        <div class="modal_athugasemd_content">
-            <p class="p2">Mat á umhverfisáhrifum er ferli þar sem metin eru á kerfisbundinn hátt áhrif sem framkvæmd getur hugsanlega haft á umhverfið. Í matsáætlun er gerð grein fyrir hvaða þættir í umhverfinu verða til skoðunar, á hvaða gögnum matið verður byggt á , hvaða rannsóknir eru fyrirhugaðar og hvernig samráði verður háttað.
-                <br><br>
-                Allir geta sent inn ábendingar um drög að matsáætlun. Frestur til athugasemda er til 6. júní 2020.
-                <br><br>
-                Hér fyrir neðan eru dæmi um ábendingar sem gætu hjálpað til að bæta matið á áhrifum framkvæmdar:
-            </p>
-            <ul>
-                <li>Hvernig telur þú að Borgarlína komi til að breyta nánasta umhverfinu þínu, t.d. varðandi hljóð, ásýnd, aðgengi og annað?</li> 
-                <li>Hvar á áhrifasvæði Borgarlínu telur þú að sé viðkvæmast fyrir áhrifum hennar?</li>
-            </ul>
-            <br><br>
-            <div class="ath_adgerd">
-                <button class="ath_cancel" onclick="ath_cancel()">Hætta við</button><button class="ath_afram" onclick="sendaAth()">Áfram</button>
+            <button class="skyringartakki" id="skyringartakki" onclick="syna_skyringarbox()">iii</button>
+            
+
+            <div id='skyringarbox2' class="skyringarbox2">
+                <h1 class="skyringar" style="text-align: center;">&nbsp; Skýringar</h1>
+                <div class="sk-b-head">
+                    <input class="sk-b" type="checkbox" name="baseLayerRadioButton" id="BorgarlinaBuffer" value="BorgarlinaBuffer" onclick="blina_onclick()"> Borgarlínuleggir<br>
+                    <input class="sk-b" type="checkbox" name="baseLayerRadioButton" id="stadhaettir" value="stadhaettir" onclick="sthr()"> Staðhættir<br>
+                    <div class="sk_img" id="kk_img"><img src="img/kk_sk.png" alt="" width="100%"></div>
+                    <input class="sk-b" type="checkbox" name="baseLayerRadioButton" id="verndarsvaedi" value="verndarsvaedi" onclick="vrsv()"> Verndarsvæði<br>
+                    <div class="sk_img" id="vs_img"><img src="img/vs_sk.png" alt="" width="100%"></div>
+                    <input class="sk-b" type="checkbox" name="baseLayerRadioButton" id="valkostagreining" value="valkostagreining" onclick="vkgr_test()"> Valkostagreining<br>
+                    <div class="sk_img" id="vg_img"><img src="img/vg_sk.png" alt="" width="100%"></div><br>
+                    <input class="sk-b" type="checkbox" name="baseLayerRadioButton" id="comment_sk" value="comment_sk" onclick="comment_test()"> Sýna athugasemdir<br>
+                </div>
             </div>
-            
-            
+
+            <button class="grunnkort" id="grunnkort" onclick="syna_grunnkort()"><img src="img/map_switch.svg" alt="flag" width="30"></button>
+
+            <div id="button-explain1" class="button-explain1">
+                <button id="btn-close1" class="btn-close1">x</button><br>
+                <strong>Höfðinn-Sæbraut</strong><br><br>
+                Liggur frá Ártúnshöfða og á brú yfir Elliðaárvog og Sæbraut. <br><br>
+                Lengd: 1,8 km <br>
+            </div>
+            <div id="button-explain2" class="button-explain2">
+                <button id="btn-close2" class="btn-close2">x</button><br>
+                <strong>Sæbraut-Suðurlandsbraut-Laugavegur</strong><br><br>
+                Liggur frá Sæbraut, Suðurlandsbraut og Laugaveg að Katrínartúni. <br><br>
+                Lengd: 3,45 km <br>
+            </div>
+            <div id="button-explain3" class="button-explain3">
+                <button id="btn-close3" class="btn-close3">x</button><br>
+                <strong>Laugavegur-HÍ</strong><br><br>
+                Liggur frá Katrínartúni, um Hlemm, Hverfisgötu, Lækjargötu, Fríkirkjuveg, Skothúsveg og Suðurgötu að Melatorgi. <br><br>
+                Lengd: 2,35 km <br>
+            </div>
+            <div id="button-explain4" class="button-explain4">
+                <button id="btn-close4" class="btn-close4">x</button><br>
+                <strong>HÍ-Landspítalinn</strong><br><br>
+                Liggur frá Melatorgi, Hringbraut að BSÍ og Burknagötu að nýja meðferðarkjarnanum. <br><br>
+                Lengd: 1,3 km <br>
+            </div>
+            <div id="button-explain5" class="button-explain5">
+                <button id="btn-close5" class="btn-close5">x</button><br>
+                <strong>Landspítalinn-HR</strong><br><br>
+                Liggur frá nýja meðferðarkjarnanum, Snorrabraut, Arnarhlíð, Nauthólsveg og að Fossvogsbrú. <br><br>
+                Lengd: 2,15 km <br>
+            </div>
+            <div id="button-explain6" class="button-explain6">
+                <button id="btn-close6" class="btn-close6">x</button><br>
+                <strong>Kársnes-Hamraborg</strong><br><br>
+                Liggur frá Fossvogsbrú á Kársnesi, Bakkabraut, Borgarholtsbraut að Hamraborg. <br><br>
+                Lengd: 1,9 km <br>
+            </div>
+            <div class="is-grouped" id="is-grouped">
+                <button id="buttontest" class="buttontest" onclick="zoomToLegOne()">Höfðinn-Sæbraut</button>
+                <button id="buttontest2" class="buttontest2" onclick="zoomToLegTwo()">Sæbraut-Suðurlandsbraut-Laugavegur</button>
+                <button id="buttontest3" class="buttontest3" onclick="zoomToLegThree()">Laugavegur-HÍ</button>
+                <button id="buttontest4" class="buttontest4" onclick="zoomToLegFour()">HÍ-Landspítalinn</button>
+                <button id="buttontest5" class="buttontest5" onclick="zoomToLegFive()">Landspítalinn-HR</button>
+                <button id="buttontest6" class="buttontest6" onclick="zoomToLegSix()">Kársnes-Hamraborg</button>
+            </div>
+
         </div>
-    </div>
 
 
-    <div class="modal_form" id="modal_form"></div>
 
-    <div class="form-popup" id="myForm">
-        <form method="POST" class="form-container" action="form_sent_thanks.html" data-netlify="true">
-        <h1>Senda athugasemd</h1>
-    
-        <label for="name"><b>Nafn:</b></label>
-        <input type="text"  id="name1" name="name" required>
-    
-        <label for="aths"><b>Athugasemd:</b></label>
-        <!-- <textarea name="aths" id="txtbox" form="form-container"></textarea><br> -->
-        <textarea name="message" id="txtbox"></textarea>
-        <br>
 
-        <label for="email"><b>Tölvupóstur (valfrjálst):</b></label>
-        <input type="email"  id="email1" name="email">
+        <div class="modal_athugasemd" id="modal_athugasemd">
+            <div class="modal_athugasemd_content">
+                <p class="p2">Mat á umhverfisáhrifum er ferli þar sem metin eru á kerfisbundinn hátt áhrif sem framkvæmd getur hugsanlega haft á umhverfið. Í matsáætlun er gerð grein fyrir hvaða þættir í umhverfinu verða til skoðunar, á hvaða gögnum matið verður byggt á , hvaða rannsóknir eru fyrirhugaðar og hvernig samráði verður háttað.
+                    <br><br>
+                    Allir geta sent inn ábendingar um drög að matsáætlun. Frestur til athugasemda er til 6. júní 2020.
+                    <br><br>
+                    Hér fyrir neðan eru dæmi um ábendingar sem gætu hjálpað til að bæta matið á áhrifum framkvæmdar:
+                </p>
+                <ul>
+                    <li>Hvernig telur þú að Borgarlína komi til að breyta nánasta umhverfinu þínu, t.d. varðandi hljóð, ásýnd, aðgengi og annað?</li> 
+                    <li>Hvar á áhrifasvæði Borgarlínu telur þú að sé viðkvæmast fyrir áhrifum hennar?</li>
+                </ul>
+                <br><br>
+                <div class="ath_adgerd">
+                    <button class="ath_cancel" onclick="ath_cancel()">Hætta við</button><button class="ath_afram" onclick="sendaAth()">Áfram</button>
+                </div>
+                
+                
+            </div>
+        </div>
 
-        <input type="hidden" id="form_coords1" name="form_coords">
+
+        <div class="modal_form" id="modal_form"></div>
+
+        <div class="form-popup" id="myForm">
+            <form method="POST" class="form-container" action="form_sent_thanks.html" data-netlify="true">
+            <h1>Senda athugasemd</h1>
         
-        <button type="button" class="btn_stadsetning" id="btn_stadsetning" onclick="btn_loc()">Velja staðsetningu á korti (valfrjálst)</button>
-        <br>
-        <input type="checkbox" name="form_checkbox"> Ekki birta athugasemd á vefsjá
-       
-        <br><br><br>
-    
-        <button type="button" class="btn cancel" onclick="closeForm()">Loka</button>
-        <button type="submit" name="submit" class="btn" id="btn_submit">Senda</button>
+            <label for="name"><b>Nafn:</b></label>
+            <input type="text"  id="name1" name="name" required>
         
-        </form>
+            <label for="aths"><b>Athugasemd:</b></label>
+            <!-- <textarea name="aths" id="txtbox" form="form-container"></textarea><br> -->
+            <textarea name="message" id="txtbox"></textarea>
+            <br>
+
+            <label for="email"><b>Tölvupóstur (valfrjálst):</b></label>
+            <input type="email"  id="email1" name="email">
+
+            <input type="hidden" id="form_coords1" name="form_coords">
+            
+            <button type="button" class="btn_stadsetning" id="btn_stadsetning" onclick="btn_loc()">Velja staðsetningu á korti (valfrjálst)</button>
+            <br>
+            <input type="checkbox" name="form_checkbox"> Ekki birta athugasemd á vefsjá
+        
+            <br><br><br>
+        
+            <button type="button" class="btn cancel" onclick="closeForm()">Loka</button>
+            <button type="submit" name="submit" class="btn" id="btn_submit">Senda</button>
+            
+            </form>
+        </div>
+
+
+
+
     </div>
   
   
@@ -214,6 +226,23 @@
             }
         }
 
+        function syna_menu_small_content(){
+            var k = document.getElementById("menu_small_content");
+            if (k.style.display != "block") {
+                k.style.display = "block";
+                document.getElementById("menu_small").innerHTML = "x";
+                document.getElementById("menu_small").style.transform = "rotate(0deg)"
+                
+                 
+            } else {
+                k.style.display = "none"
+                document.getElementById("menu_small").innerHTML = "lll";
+                document.getElementById("menu_small").style.transform = "rotate(90deg)"
+                
+               
+            }
+        }
+
 
         function syna_skyringarbox(){
             
@@ -247,13 +276,23 @@
 
         var modal = document.getElementById("modal_meginmal");
         var modal_btn = document.getElementById("hjalp");
+        var modal_a_um = document.getElementById("menu_small_um");
         var modal_span = document.getElementsByClassName("modal_close")[0];
         modal_btn.onclick = function(){
             modal.style.display = "block";
         }
+        modal_a_um.onclick = function(){
+            modal.style.display = "block";
+            document.getElementById("menu_small_content").style.display = "none";
+            document.getElementById("menu_small").innerHTML = "lll";
+            document.getElementById("menu_small").style.transform = "rotate(90deg)"
+        }
         modal_span.onclick = function(){
             modal.style.display = "none"
         }
+
+        
+
         
 
         // $(document).ready(function(){
