@@ -166,7 +166,9 @@
             <label for="email"><b>Tölvupóstur (valfrjálst):</b></label>
             <input type="email"  id="email1" name="email">
 
-            <input type="hidden" id="form_coords1" name="form_coords">
+            <input type="hidden" id="form_coordsX" name="X">
+            <input type="hidden" id="form_coordsY" name="Y">
+            <input type="hidden" id="form_date" name="date">
             
             <button type="button" class="btn_stadsetning" id="btn_stadsetning" onclick="btn_loc()">Velja staðsetningu á korti (valfrjálst)</button>
             <br>
@@ -265,6 +267,7 @@
             
             var a = document.getElementById("modal_athugasemd");
             a.style.display = "block";
+            document.getElementById("form_date").value = new Date();
         }
 
         function ath_cancel(){
@@ -445,8 +448,10 @@
 
             var comment_txtbox = document.getElementById("txtbox").value;
             var comment_name = document.getElementById("name1").value;
-            document.getElementById("form_coords1").value = clicked_coord;
-            console.log(document.getElementById("form_coords1").value);
+            document.getElementById("form_coordsX").value = clicked_coord[0];
+            document.getElementById("form_coordsY").value = clicked_coord[1];
+            console.log(document.getElementById("form_coordsX").value);
+            console.log(document.getElementById("form_date").value);
 
             
         }
