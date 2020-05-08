@@ -276,7 +276,7 @@ var blina_stopp_labels = new ol.layer.VectorImage({
     zIndex: 12,
     visible: true,
     title: 'BorgarlinaStopp',
-    style: blina_stopp_style_func,
+    style: blina_stopp_style_func2,
     declutter: true
 });
 map.addLayer(blina_stopp_labels);
@@ -285,11 +285,225 @@ map.addLayer(blina_stopp_labels);
 
 
 
+
+
+
+function blina_stopp_style_func2(){
+    blina_stopp_labels.getSource().forEachFeature(function(feature){
+        if (feature.get('stopp_name') == "Hamraborg") {
+            
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: 25,
+                offsetY: 20,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            feature.setStyle(new ol.style.Style({
+                text: textstyle,
+            }))
+        } else if (feature.get('stopp_name') == "Hlíðarendi") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: 40,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            feature.setStyle(new ol.style.Style({
+                text: textstyle,
+            }))
+        } else if (feature.get('stopp_name') == "HR") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: 20,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            feature.setStyle(new ol.style.Style({
+                text: textstyle,
+            }))
+        } else if (feature.get('stopp_name') == "Öskjuhlíð") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: 40,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            feature.setStyle(new ol.style.Style({
+                text: textstyle,
+            }))
+        } else if (feature.get('stopp_name') == "Lækjartorg") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: -40,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            feature.setStyle(new ol.style.Style({
+                text: textstyle,
+            }))
+        } else if (feature.get('stopp_name') == "Hlemmur") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetY: 20,
+                offsetX: -20,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            feature.setStyle(new ol.style.Style({
+                text: textstyle,
+            }))
+        } else if (feature.get('stopp_name') == "Frakkastígur") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: 40,
+                offsetY: -15,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            feature.setStyle(new ol.style.Style({
+                text: textstyle,
+            }))
+        } else if (feature.get('stopp_name') == "Smiðjustígur") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: 20,
+                offsetY: -15,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            feature.setStyle(new ol.style.Style({
+                text: textstyle,
+            }))
+        } else if (feature.get('stopp_name') == "Elliðaárvogur") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetY: 25,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            feature.setStyle(new ol.style.Style({
+                text: textstyle,
+            }))
+        } else if (feature.get('stopp_name') == "HÍ") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: 20,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            feature.setStyle(new ol.style.Style({
+                text: textstyle,
+            }))
+        } 
+        else {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetY: -20,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            feature.setStyle(new ol.style.Style({
+                text: textstyle,
+            }))
+        } 
+    })
+}
+
+
 //Add NM, fridlyst og karakterkort
 //Karakter
 var karakterkort = new ol.layer.VectorImage({
     source: new ol.source.Vector({
-        url: "data/karakterkort_update.geojson",
+        url: "data/karakterkort_update2.geojson",
         format: new ol.format.GeoJSON()
     }),
     zIndex: 1,
@@ -526,30 +740,11 @@ var valkostir_stopp_labels = new ol.layer.VectorImage({
 map.addLayer(valkostir_stopp_labels);
 
 
-//Hverfisvernd
-// var hverfisvernd = new ol.layer.VectorImage({
-//     source: new ol.source.Vector({
-//         url: "data/hverfisvernd_update.geojson",
-//         format: new ol.format.GeoJSON()
-//     }),
-//     zIndex: 1,
-//     visible: true,
-//     title: 'hv',
-//     style: new ol.style.Style({
-//         fill: new ol.style.Fill({
-//             color: [200, 200, 200, 0.5]
-//         }),
-//         stroke: new ol.style.Stroke({
-//             color: [200, 200, 200, 0.8],
-//             width: 1,
-//         })
-//     })
-// });
-// map.addLayer(hverfisvernd);
+
 
 var hverfisvernd = new ol.layer.VectorImage({
     source: new ol.source.Vector({
-        url: "data/hverfisvernd_update.geojson",
+        url: "data/hverfisvernd_update2.geojson",
         format: new ol.format.GeoJSON()
     }),
     zIndex: 2,
@@ -853,7 +1048,7 @@ map.addLayer(comment);
 // Popup overlay
 var popup = new ol.Overlay.Popup (
 {	popupClass: "default", //"tooltips", "warning" "black" "default", "tips", "shadow",
-    closeBox: true,
+    closeBox: false,
     onshow: function(){ console.log("You opened the box"); },
     onclose: function(){ console.log("You close the box"); },
     positioning: 'auto',
@@ -862,9 +1057,24 @@ var popup = new ol.Overlay.Popup (
 });
 
 
+
 // Control Select 
 var select = new ol.interaction.Select({
-    source: comment.getSource(),
+    // source: comment.getSource(),
+    layers: [comment],
+    style: new ol.style.Style({
+        image: new ol.style.Circle({
+            radius: 7,
+            fill: new ol.style.Fill({
+                // color: [245, 246, 67, 1]
+                color: [245, 126, 66, 1]
+            }),
+            stroke: new ol.style.Stroke({
+                color: [255, 0, 0, 1],
+                width: 2,
+            })
+        }),
+    })
 });
 map.addInteraction(select);
 
@@ -881,17 +1091,60 @@ select.getFeatures().on(['remove'], function(e) {
   popup.hide(); 
 })
 
-map.addOverlay(popup)
 
 
 
 
 
+var popup2 = new ol.Overlay.Popup (
+    {	popupClass: "default",
+     //"tooltips", "warning" "black" "default", "tips", "shadow",
+        closeBox: false,
+        onshow: function(){ console.log("You opened the box"); },
+        onclose: function(){ console.log("You close the box"); },
+        positioning: 'auto',
+        autoPan: true,
+        autoPanAnimation: { duration: 250 }
+    });
+    
+
+//Select karakterkort
+var select_kar = new ol.interaction.Select({
+    // source: comment.getSource(),
+    layers: [karakterkort],
+    style: new ol.style.Style({
+        fill: new ol.style.Fill({
+            color: [255, 255, 255, 0]
+        }),
+        stroke: new ol.style.Stroke({
+            color: [255, 0, 0, 0.8],
+            width: 4,
+        })
+    })
+});
+map.addInteraction(select_kar);
+
+
+
+select_kar.getFeatures().on(['add'], function(e) {
+    var feature = e.element;
+    var content = "";
+    content += feature.get("nafn");
+    var geom = feature.getGeometry();
+    if (content !== "undefined") {
+        popup2.show(geom.getFirstCoordinate(),content); 
+    }
+});
+select_kar.getFeatures().on(['remove'], function(e) {
+    popup2.hide();
+    select_kar.getFeatures().clear()
+    
+})
 
 
 
 
-
-
+map.addOverlay(popup);
+map.addOverlay(popup2)
 
 
