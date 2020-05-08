@@ -183,6 +183,8 @@
         </div>
 
 
+      
+
 
 
     </div>
@@ -314,6 +316,7 @@
             // document.getElementById("modal_athugasemd").style.display = "none";
             document.getElementById("myForm").style.display = "none";
             document.getElementById("modal_form").style.display = "none";
+            document.getElementById("btn_stadsetning").style.background = "rgba(30, 160, 121, 1)";
         }
 
         
@@ -367,12 +370,16 @@
                     })
                     return [blina_stops_text]
                 }
-                blina_stopp_labels.setStyle(blina_stopp_style_func2)
+                blina_stopp_labels.setStyle(blina_stopp_style_func2);
+                // document.getElementById("skyringartakki").style.backgroundColor = "rgba(0,0,255,0.8)";
+                // document.getElementById("grunnkort").style.backgroundColor = "rgba(0,0,255,0.8)";
             } else if (OSMStandard.getVisible() == false) {
                 OSMStandard.setVisible(true);
                 BingMap.setVisible(false);
-                blina.setStyle(blina_style_one)
-                blina_stopp_labels.setStyle(blina_stopp_style_func)
+                blina.setStyle(blina_style_one);
+                blina_stopp_labels.setStyle(blina_stopp_style_func);
+                // document.getElementById("skyringartakki").style.backgroundColor = "rgba(30, 160, 121, 1)";
+                // document.getElementById("grunnkort").style.backgroundColor = "rgba(30, 160, 121, 1)";
             }
         }
 
@@ -461,6 +468,7 @@
             document.getElementById('js-map').style.cursor = "crosshair"
 
             map.on('singleclick',callback);
+            document.getElementById("btn_stadsetning").style.background = "rgb(71, 70, 70)";
             
         }
 
