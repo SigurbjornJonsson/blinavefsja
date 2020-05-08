@@ -22,6 +22,7 @@ body{
     font-family: sans-serif;
     justify-content: center;
     overflow-x: hidden;
+    background-color: whitesmoke;
 }
 
 .skilabod {
@@ -39,6 +40,10 @@ h3 {
     color: black;
     font-size: 25px;
     font-weight: 600;
+}
+
+h5 {
+    font-style: italic;
 }
 
 a {
