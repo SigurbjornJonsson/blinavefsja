@@ -316,6 +316,7 @@
             document.getElementById("myForm").style.display = "none";
             document.getElementById("modal_form").style.display = "none";
             document.getElementById("btn_stadsetning").style.background = "rgba(30, 160, 121, 1)";
+            document.getElementById('btn_stadsetning').innerHTML = "Velja staðsetningu á korti (valfrjálst)";
         }
 
         
@@ -436,7 +437,8 @@
 
         function btn_loc(){
             closeForm();
-            document.getElementById('js-map').style.cursor = "crosshair"
+            document.getElementById('js-map').style.cursor = "crosshair";
+            document.getElementById('btn_stadsetning').innerHTML = "Velja staðsetningu á korti (✓)";
 
             map.on('singleclick',callback);
             document.getElementById("btn_stadsetning").style.background = "rgb(71, 70, 70)";
