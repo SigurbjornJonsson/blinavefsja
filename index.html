@@ -50,9 +50,7 @@
         </div>
 
 
-        <!-- <div class="athugasemd_container">
-            <button class="athugasemd_btn" onclick="ath_afram()">Senda Athugasemd</button>
-        </div> -->
+       
 
 
 
@@ -138,6 +136,7 @@
                 <ul>
                     <li>Hvernig telur þú að Borgarlína komi til að breyta nánasta umhverfinu þínu, t.d. varðandi hljóð, ásýnd, aðgengi og annað?</li> 
                     <li>Hvar á áhrifasvæði Borgarlínu telur þú að sé viðkvæmast fyrir áhrifum hennar?</li>
+                    <li>Hvað finnst þér um staðsetningu stöðva?</li>
                 </ul>
                 <br><br>
                 <div class="ath_adgerd">
@@ -153,7 +152,7 @@
 
         <div class="form-popup" id="myForm">
             <form method="POST" class="form-container" action="form_sent_thanks.html" data-netlify="true">
-            <h1>Senda athugasemd</h1>
+            <h1>Senda athugasemd </h1>
         
             <label for="name"><b>Nafn:</b></label>
             <input type="text"  id="name1" name="name" required>
@@ -331,57 +330,29 @@
         }
         
 
-        function syna_grunnkort() {
-            if (OSMStandard.getVisible() == true) {
-                OSMStandard.setVisible(false);
-                BingMap.setVisible(true);
-                var blina_style_two = new ol.style.Style({
-                    stroke: new ol.style.Stroke({
-                        color: [0, 0, 255, 1],
-                        width: 5,
-                    })
-                });
-                blina.setStyle(blina_style_two);
-                function blina_stopp_style_func2(feature){
-                    var blina_stops_text = new ol.style.Style({
-                        // image: new ol.style.Circle({
-                        //     radius: 5,
-                        //     fill: new ol.style.Fill({
-                        //         color: [255, 255, 255, 1]
-                        //     }),
-                        //     stroke: new ol.style.Stroke({
-                        //         color: [0, 0, 0, 1],
-                        //         width: 2,
-                        //     })
-                        // }),
-                            
-                        text: new ol.style.Text({
-                            font: '12px Calibri,sans-serif',
-                            fill: new ol.style.Fill({ color: '#0000ff' }),
-                            stroke: new ol.style.Stroke({
-                            color: '#fff', 
-                            width: 4
-                            }),
-                            text: feature.get('stopp_name'),
-                            offsetY: -25,
-                            scale: 1.2,
-                            // padding: [10,10,10,10]
-                        })
-                    })
-                    return [blina_stops_text]
-                }
-                blina_stopp_labels.setStyle(blina_stopp_style_func2);
-                // document.getElementById("skyringartakki").style.backgroundColor = "rgba(0,0,255,0.8)";
-                // document.getElementById("grunnkort").style.backgroundColor = "rgba(0,0,255,0.8)";
-            } else if (OSMStandard.getVisible() == false) {
-                OSMStandard.setVisible(true);
-                BingMap.setVisible(false);
-                blina.setStyle(blina_style_one);
-                blina_stopp_labels.setStyle(blina_stopp_style_func);
-                // document.getElementById("skyringartakki").style.backgroundColor = "rgba(30, 160, 121, 1)";
-                // document.getElementById("grunnkort").style.backgroundColor = "rgba(30, 160, 121, 1)";
-            }
-        }
+        // function syna_grunnkort() {
+        //     if (OSMStandard.getVisible() == true) {
+        //         OSMStandard.setVisible(false);
+        //         BingMap.setVisible(true);
+        //         var blina_style_two = new ol.style.Style({
+        //             stroke: new ol.style.Stroke({
+        //                 color: [0, 0, 255, 1],
+        //                 width: 5,
+        //             })
+        //         });
+        //         blina.setStyle(blina_style_two);
+                
+        //         // document.getElementById("skyringartakki").style.backgroundColor = "rgba(0,0,255,0.8)";
+        //         // document.getElementById("grunnkort").style.backgroundColor = "rgba(0,0,255,0.8)";
+        //     } else if (OSMStandard.getVisible() == false) {
+        //         OSMStandard.setVisible(true);
+        //         BingMap.setVisible(false);
+        //         blina.setStyle(blina_style_one);
+                
+        //         // document.getElementById("skyringartakki").style.backgroundColor = "rgba(30, 160, 121, 1)";
+        //         // document.getElementById("grunnkort").style.backgroundColor = "rgba(30, 160, 121, 1)";
+        //     }
+        // }
 
         function vkgr_test(){
             var vkgr = document.getElementById("valkostagreining");
