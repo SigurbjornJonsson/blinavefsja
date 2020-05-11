@@ -214,37 +214,6 @@ map.addLayer(blina);
 
 
 
-//Add Borgarlína-stopp to the map
-function blina_stopp_style_func(feature){
-    var blina_stops_text = new ol.style.Style({
-        // image: new ol.style.Circle({
-        //     radius: 5,
-        //     fill: new ol.style.Fill({
-        //         color: [255, 255, 255, 1]
-        //     }),
-        //     stroke: new ol.style.Stroke({
-        //         color: [0, 0, 0, 1],
-        //         width: 2,
-        //     })
-        // }),
-            
-        text: new ol.style.Text({
-            font: '12px Calibri,sans-serif',
-            fill: new ol.style.Fill({ color: '#054929' }),
-            stroke: new ol.style.Stroke({
-              color: '#fff', 
-              width: 4
-            }),
-            text: feature.get('stopp_name'),
-            offsetY: -25,
-            scale: 1.2,
-            // padding: [10,10,10,10]
-        })
-    })
-    return [blina_stops_text]
-}
-
-
 var blina_stopp = new ol.layer.VectorImage({
     source: new ol.source.Vector({
         url: "data/blina_stopp_update.geojson",
@@ -268,6 +237,7 @@ var blina_stopp = new ol.layer.VectorImage({
 });
 map.addLayer(blina_stopp);
 
+
 var blina_stopp_labels = new ol.layer.VectorImage({
     source: new ol.source.Vector({
         url: "data/blina_stopp_update.geojson",
@@ -276,227 +246,66 @@ var blina_stopp_labels = new ol.layer.VectorImage({
     zIndex: 12,
     visible: true,
     title: 'BorgarlinaStopp',
-    style: blina_stopp_style_func2,
+    style: blina_stopp_style_func_pos,
     declutter: true
 });
+
+
+
 map.addLayer(blina_stopp_labels);
 
 
 
 
-
-
-
-
-function blina_stopp_style_func2(){
-    blina_stopp_labels.getSource().forEachFeature(function(feature){
-        if (feature.get('stopp_name') == "Hamraborg") {
-            
-            var textstyle = new ol.style.Text({
-                font: '12px Calibri,sans-serif',
-                fill: new ol.style.Fill({ color: '#054929' }),
-                stroke: new ol.style.Stroke({
-                    color: '#fff', 
-                    width: 4
-                }),
-                text: feature.get('stopp_name'),
-                offsetX: 25,
-                offsetY: 20,
-                scale: 1.2,
-                // padding: [10,10,10,10]
-            });
-            
-
-            feature.setStyle(new ol.style.Style({
-                text: textstyle,
-            }))
-        } else if (feature.get('stopp_name') == "Hlíðarendi") {
-            var textstyle = new ol.style.Text({
-                font: '12px Calibri,sans-serif',
-                fill: new ol.style.Fill({ color: '#054929' }),
-                stroke: new ol.style.Stroke({
-                    color: '#fff', 
-                    width: 4
-                }),
-                text: feature.get('stopp_name'),
-                offsetX: 40,
-                scale: 1.2,
-                // padding: [10,10,10,10]
-            });
-            
-
-            feature.setStyle(new ol.style.Style({
-                text: textstyle,
-            }))
-        } else if (feature.get('stopp_name') == "HR") {
-            var textstyle = new ol.style.Text({
-                font: '12px Calibri,sans-serif',
-                fill: new ol.style.Fill({ color: '#054929' }),
-                stroke: new ol.style.Stroke({
-                    color: '#fff', 
-                    width: 4
-                }),
-                text: feature.get('stopp_name'),
-                offsetX: 20,
-                scale: 1.2,
-                // padding: [10,10,10,10]
-            });
-            
-
-            feature.setStyle(new ol.style.Style({
-                text: textstyle,
-            }))
-        } else if (feature.get('stopp_name') == "Öskjuhlíð") {
-            var textstyle = new ol.style.Text({
-                font: '12px Calibri,sans-serif',
-                fill: new ol.style.Fill({ color: '#054929' }),
-                stroke: new ol.style.Stroke({
-                    color: '#fff', 
-                    width: 4
-                }),
-                text: feature.get('stopp_name'),
-                offsetX: 40,
-                scale: 1.2,
-                // padding: [10,10,10,10]
-            });
-            
-
-            feature.setStyle(new ol.style.Style({
-                text: textstyle,
-            }))
-        } else if (feature.get('stopp_name') == "Lækjartorg") {
-            var textstyle = new ol.style.Text({
-                font: '12px Calibri,sans-serif',
-                fill: new ol.style.Fill({ color: '#054929' }),
-                stroke: new ol.style.Stroke({
-                    color: '#fff', 
-                    width: 4
-                }),
-                text: feature.get('stopp_name'),
-                offsetX: -40,
-                scale: 1.2,
-                // padding: [10,10,10,10]
-            });
-            
-
-            feature.setStyle(new ol.style.Style({
-                text: textstyle,
-            }))
-        } else if (feature.get('stopp_name') == "Hlemmur") {
-            var textstyle = new ol.style.Text({
-                font: '12px Calibri,sans-serif',
-                fill: new ol.style.Fill({ color: '#054929' }),
-                stroke: new ol.style.Stroke({
-                    color: '#fff', 
-                    width: 4
-                }),
-                text: feature.get('stopp_name'),
-                offsetY: 20,
-                offsetX: -20,
-                scale: 1.2,
-                // padding: [10,10,10,10]
-            });
-            
-
-            feature.setStyle(new ol.style.Style({
-                text: textstyle,
-            }))
-        } else if (feature.get('stopp_name') == "Frakkastígur") {
-            var textstyle = new ol.style.Text({
-                font: '12px Calibri,sans-serif',
-                fill: new ol.style.Fill({ color: '#054929' }),
-                stroke: new ol.style.Stroke({
-                    color: '#fff', 
-                    width: 4
-                }),
-                text: feature.get('stopp_name'),
-                offsetX: 40,
-                offsetY: -15,
-                scale: 1.2,
-                // padding: [10,10,10,10]
-            });
-            
-
-            feature.setStyle(new ol.style.Style({
-                text: textstyle,
-            }))
-        } else if (feature.get('stopp_name') == "Smiðjustígur") {
-            var textstyle = new ol.style.Text({
-                font: '12px Calibri,sans-serif',
-                fill: new ol.style.Fill({ color: '#054929' }),
-                stroke: new ol.style.Stroke({
-                    color: '#fff', 
-                    width: 4
-                }),
-                text: feature.get('stopp_name'),
-                offsetX: 20,
-                offsetY: -15,
-                scale: 1.2,
-                // padding: [10,10,10,10]
-            });
-            
-
-            feature.setStyle(new ol.style.Style({
-                text: textstyle,
-            }))
-        } else if (feature.get('stopp_name') == "Elliðaárvogur") {
-            var textstyle = new ol.style.Text({
-                font: '12px Calibri,sans-serif',
-                fill: new ol.style.Fill({ color: '#054929' }),
-                stroke: new ol.style.Stroke({
-                    color: '#fff', 
-                    width: 4
-                }),
-                text: feature.get('stopp_name'),
-                offsetY: 25,
-                scale: 1.2,
-                // padding: [10,10,10,10]
-            });
-            
-
-            feature.setStyle(new ol.style.Style({
-                text: textstyle,
-            }))
-        } else if (feature.get('stopp_name') == "HÍ") {
-            var textstyle = new ol.style.Text({
-                font: '12px Calibri,sans-serif',
-                fill: new ol.style.Fill({ color: '#054929' }),
-                stroke: new ol.style.Stroke({
-                    color: '#fff', 
-                    width: 4
-                }),
-                text: feature.get('stopp_name'),
-                offsetX: 20,
-                scale: 1.2,
-                // padding: [10,10,10,10]
-            });
-            
-
-            feature.setStyle(new ol.style.Style({
-                text: textstyle,
-            }))
-        } 
-        else {
-            var textstyle = new ol.style.Text({
-                font: '12px Calibri,sans-serif',
-                fill: new ol.style.Fill({ color: '#054929' }),
-                stroke: new ol.style.Stroke({
-                    color: '#fff', 
-                    width: 4
-                }),
-                text: feature.get('stopp_name'),
-                offsetY: -20,
-                scale: 1.2,
-                // padding: [10,10,10,10]
-            });
-            
-
-            feature.setStyle(new ol.style.Style({
-                text: textstyle,
-            }))
-        } 
-    })
+function syna_grunnkort() {
+    if (OSMStandard.getVisible() == true) {
+        OSMStandard.setVisible(false);
+        BingMap.setVisible(true);
+        var blina_style_two = new ol.style.Style({
+            stroke: new ol.style.Stroke({
+                color: [0, 0, 255, 1],
+                width: 5,
+            })
+        });
+        blina.setStyle(blina_style_two);
+       
+        
+        // document.getElementById("skyringartakki").style.backgroundColor = "rgba(0,0,255,0.8)";
+        // document.getElementById("grunnkort").style.backgroundColor = "rgba(0,0,255,0.8)";
+    } else if (OSMStandard.getVisible() == false) {
+        OSMStandard.setVisible(true);
+        BingMap.setVisible(false);
+        blina.setStyle(blina_style_one);
+       
+        // document.getElementById("skyringartakki").style.backgroundColor = "rgba(30, 160, 121, 1)";
+        // document.getElementById("grunnkort").style.backgroundColor = "rgba(30, 160, 121, 1)";
+    }
 }
+
+
+// var blina_stopp_labels_aerial = new ol.layer.VectorImage({
+//     source: new ol.source.Vector({
+//         url: "data/blina_stopp_update.geojson",
+//         format: new ol.format.GeoJSON()
+//     }),
+//     zIndex: 12,
+//     visible: false,
+//     title: 'BorgarlinaStopp',
+//     style: blina_stopp_style_func3,
+//     declutter: true
+// });
+
+
+// map.addLayer(blina_stopp_labels_aerial);
+
+
+
+
+
+
+
+
+
 
 
 //Add NM, fridlyst og karakterkort
@@ -1016,7 +825,7 @@ var comment = new ol.layer.VectorImage({
         url: "data/comment.geojson",
         format: new ol.format.GeoJSON()
     }),
-    zIndex: 12,
+    zIndex: 20,
     visible: false,
     title: 'comment',
     style: new ol.style.Style({
@@ -1049,8 +858,8 @@ map.addLayer(comment);
 var popup = new ol.Overlay.Popup (
 {	popupClass: "default", //"tooltips", "warning" "black" "default", "tips", "shadow",
     closeBox: false,
-    onshow: function(){ console.log("You opened the box"); },
-    onclose: function(){ console.log("You close the box"); },
+    // onshow: function(){ console.log("You opened the box"); },
+    // onclose: function(){ console.log("You close the box"); },
     positioning: 'auto',
     autoPan: true,
     autoPanAnimation: { duration: 250 }
@@ -1146,5 +955,448 @@ select_kar.getFeatures().on(['remove'], function(e) {
 
 map.addOverlay(popup);
 map.addOverlay(popup2)
+
+
+
+
+
+
+
+
+
+
+
+//Some styles
+function blina_stopp_style_func_pos(){
+    blina_stopp_labels.getSource().forEachFeature(function(feature){
+        if (feature.get('stopp_name') == "Hamraborg") {
+            
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: 25,
+                offsetY: 20,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            // feature.setStyle(new ol.style.Style({
+            //     text: textstyle,
+            // }))
+        } else if (feature.get('stopp_name') == "Hlíðarendi") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: 40,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            // feature.setStyle(new ol.style.Style({
+            //     text: textstyle,
+            // }))
+        } else if (feature.get('stopp_name') == "HR") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: 20,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            // feature.setStyle(new ol.style.Style({
+            //     text: textstyle,
+            // }))
+        } else if (feature.get('stopp_name') == "Öskjuhlíð") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: 40,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            // feature.setStyle(new ol.style.Style({
+            //     text: textstyle,
+            // }))
+        } else if (feature.get('stopp_name') == "Lækjartorg") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: -40,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            // feature.setStyle(new ol.style.Style({
+            //     text: textstyle,
+            // }))
+        } else if (feature.get('stopp_name') == "Hlemmur") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetY: 20,
+                offsetX: -20,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            // feature.setStyle(new ol.style.Style({
+            //     text: textstyle,
+            // }))
+        } else if (feature.get('stopp_name') == "Frakkastígur") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: 40,
+                offsetY: -15,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            // feature.setStyle(new ol.style.Style({
+            //     text: textstyle,
+            // }))
+        } else if (feature.get('stopp_name') == "Smiðjustígur") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: 20,
+                offsetY: -15,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            // feature.setStyle(new ol.style.Style({
+            //     text: textstyle,
+            // }))
+        } else if (feature.get('stopp_name') == "Elliðaárvogur") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetY: 25,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            // feature.setStyle(new ol.style.Style({
+            //     text: textstyle,
+            // }))
+        } else if (feature.get('stopp_name') == "HÍ") {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetX: 20,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            // feature.setStyle(new ol.style.Style({
+            //     text: textstyle,
+            // }))
+        } 
+        else {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+                fill: new ol.style.Fill({ color: '#054929' }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff', 
+                    width: 4
+                }),
+                text: feature.get('stopp_name'),
+                offsetY: -20,
+                scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+
+            // feature.setStyle(new ol.style.Style({
+            //     text: textstyle,
+            // }))
+        } 
+
+        feature.setStyle(new ol.style.Style({
+            text: textstyle,
+        }))
+    })
+}
+
+
+
+
+
+// //Another blina stopp styel for aeriel view
+// function blina_stopp_style_func3(){
+//     blina_stopp_labels.getSource().forEachFeature(function(feature){
+//         if (feature.get('stopp_name') == "Hamraborg") {
+            
+//             var textstyle = new ol.style.Text({
+//                 font: '12px Calibri,sans-serif',
+//                 fill: new ol.style.Fill({ color: '#0000ff' }),
+//                 stroke: new ol.style.Stroke({
+//                     color: '#fff', 
+//                     width: 4
+//                 }),
+//                 text: feature.get('stopp_name'),
+//                 offsetX: 25,
+//                 offsetY: 20,
+//                 scale: 1.2,
+//                 // padding: [10,10,10,10]
+//             });
+            
+
+//             feature.setStyle(new ol.style.Style({
+//                 text: textstyle,
+//             }))
+//         } else if (feature.get('stopp_name') == "Hlíðarendi") {
+//             var textstyle = new ol.style.Text({
+//                 font: '12px Calibri,sans-serif',
+//                 fill: new ol.style.Fill({ color: '#0000ff' }),
+//                 stroke: new ol.style.Stroke({
+//                     color: '#fff', 
+//                     width: 4
+//                 }),
+//                 text: feature.get('stopp_name'),
+//                 offsetX: 40,
+//                 scale: 1.2,
+//                 // padding: [10,10,10,10]
+//             });
+            
+
+//             feature.setStyle(new ol.style.Style({
+//                 text: textstyle,
+//             }))
+//         } else if (feature.get('stopp_name') == "HR") {
+//             var textstyle = new ol.style.Text({
+//                 font: '12px Calibri,sans-serif',
+//                 fill: new ol.style.Fill({ color: '#0000ff' }),
+//                 stroke: new ol.style.Stroke({
+//                     color: '#fff', 
+//                     width: 4
+//                 }),
+//                 text: feature.get('stopp_name'),
+//                 offsetX: 20,
+//                 scale: 1.2,
+//                 // padding: [10,10,10,10]
+//             });
+            
+
+//             feature.setStyle(new ol.style.Style({
+//                 text: textstyle,
+//             }))
+//         } else if (feature.get('stopp_name') == "Öskjuhlíð") {
+//             var textstyle = new ol.style.Text({
+//                 font: '12px Calibri,sans-serif',
+//                 fill: new ol.style.Fill({ color: '#0000ff' }),
+//                 stroke: new ol.style.Stroke({
+//                     color: '#fff', 
+//                     width: 4
+//                 }),
+//                 text: feature.get('stopp_name'),
+//                 offsetX: 40,
+//                 scale: 1.2,
+//                 // padding: [10,10,10,10]
+//             });
+            
+
+//             feature.setStyle(new ol.style.Style({
+//                 text: textstyle,
+//             }))
+//         } else if (feature.get('stopp_name') == "Lækjartorg") {
+//             var textstyle = new ol.style.Text({
+//                 font: '12px Calibri,sans-serif',
+//                 fill: new ol.style.Fill({ color: '#0000ff' }),
+//                 stroke: new ol.style.Stroke({
+//                     color: '#fff', 
+//                     width: 4
+//                 }),
+//                 text: feature.get('stopp_name'),
+//                 offsetX: -40,
+//                 scale: 1.2,
+//                 // padding: [10,10,10,10]
+//             });
+            
+
+//             feature.setStyle(new ol.style.Style({
+//                 text: textstyle,
+//             }))
+//         } else if (feature.get('stopp_name') == "Hlemmur") {
+//             var textstyle = new ol.style.Text({
+//                 font: '12px Calibri,sans-serif',
+//                 fill: new ol.style.Fill({ color: '#0000ff' }),
+//                 stroke: new ol.style.Stroke({
+//                     color: '#fff', 
+//                     width: 4
+//                 }),
+//                 text: feature.get('stopp_name'),
+//                 offsetY: 20,
+//                 offsetX: -20,
+//                 scale: 1.2,
+//                 // padding: [10,10,10,10]
+//             });
+            
+
+//             feature.setStyle(new ol.style.Style({
+//                 text: textstyle,
+//             }))
+//         } else if (feature.get('stopp_name') == "Frakkastígur") {
+//             var textstyle = new ol.style.Text({
+//                 font: '12px Calibri,sans-serif',
+//                 fill: new ol.style.Fill({ color: '#0000ff' }),
+//                 stroke: new ol.style.Stroke({
+//                     color: '#fff', 
+//                     width: 4
+//                 }),
+//                 text: feature.get('stopp_name'),
+//                 offsetX: 40,
+//                 offsetY: -15,
+//                 scale: 1.2,
+//                 // padding: [10,10,10,10]
+//             });
+            
+
+//             feature.setStyle(new ol.style.Style({
+//                 text: textstyle,
+//             }))
+//         } else if (feature.get('stopp_name') == "Smiðjustígur") {
+//             var textstyle = new ol.style.Text({
+//                 font: '12px Calibri,sans-serif',
+//                 fill: new ol.style.Fill({ color: '#0000ff' }),
+//                 stroke: new ol.style.Stroke({
+//                     color: '#fff', 
+//                     width: 4
+//                 }),
+//                 text: feature.get('stopp_name'),
+//                 offsetX: 20,
+//                 offsetY: -15,
+//                 scale: 1.2,
+//                 // padding: [10,10,10,10]
+//             });
+            
+
+//             feature.setStyle(new ol.style.Style({
+//                 text: textstyle,
+//             }))
+//         } else if (feature.get('stopp_name') == "Elliðaárvogur") {
+//             var textstyle = new ol.style.Text({
+//                 font: '12px Calibri,sans-serif',
+//                 fill: new ol.style.Fill({ color: '#0000ff' }),
+//                 stroke: new ol.style.Stroke({
+//                     color: '#fff', 
+//                     width: 4
+//                 }),
+//                 text: feature.get('stopp_name'),
+//                 offsetY: 25,
+//                 scale: 1.2,
+//                 // padding: [10,10,10,10]
+//             });
+            
+
+//             feature.setStyle(new ol.style.Style({
+//                 text: textstyle,
+//             }))
+//         } else if (feature.get('stopp_name') == "HÍ") {
+//             var textstyle = new ol.style.Text({
+//                 font: '12px Calibri,sans-serif',
+//                 fill: new ol.style.Fill({ color: '#0000ff' }),
+//                 stroke: new ol.style.Stroke({
+//                     color: '#fff', 
+//                     width: 4
+//                 }),
+//                 text: feature.get('stopp_name'),
+//                 offsetX: 20,
+//                 scale: 1.2,
+//                 // padding: [10,10,10,10]
+//             });
+            
+
+//             feature.setStyle(new ol.style.Style({
+//                 text: textstyle,
+//             }))
+//         } 
+//         else {
+//             var textstyle = new ol.style.Text({
+//                 font: '12px Calibri,sans-serif',
+//                 fill: new ol.style.Fill({ color: '#0000ff' }),
+//                 stroke: new ol.style.Stroke({
+//                     color: '#fff', 
+//                     width: 4
+//                 }),
+//                 text: feature.get('stopp_name'),
+//                 offsetY: -20,
+//                 scale: 1.2,
+//                 // padding: [10,10,10,10]
+//             });
+            
+
+//             feature.setStyle(new ol.style.Style({
+//                 text: textstyle,
+//             }))
+//         } 
+//     })
+// }
+
+
+
 
 
