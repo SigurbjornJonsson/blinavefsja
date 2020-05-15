@@ -5,6 +5,5 @@
 "features": [
 { "type": "Feature", "properties": { "nafn": "Jónas Guðmundsson", "comment": "Hver verður hámarkshraði vagna? Hafa þeir leyfi til að fara yfir löglegan hámarkshraða. Hérna fara mikið af krökkum yfir götuna - þarf að passa allar merkingar mjög vel!" }, "geometry": { "type": "Point", "coordinates": [ -2442274.3285582988, 9386701.397682711 ] } },
 { "type": "Feature", "properties": { "nafn": "Guðrún Ólafsdóttir", "comment": "Þarf að kynna vel hvernig höfðahverfið breytist með komu Borgarlínunannar. Hér eru mörg fyrirtæki sem þarf að upplýsa vel um stöðu mála." }, "geometry": { "type": "Point", "coordinates": [ -2429577.340870987, 9382707.373449273 ] } }
-{ "type": "Feature", "properties": { "nafn": "Guðrún Ólafsdóttir", "comment": "Hef áhyggjur af hávaðamengun. Hversu margir vagnar munu bruna hér framhjá á hverjum klukkutíma?" }, "geometry": { "type": "Point", "coordinates": [ -2440042.825168846640736, 9386288.286942323669791 ] } },
 ]
 }
