@@ -481,35 +481,96 @@ function valkostir_style(){
 // map.addLayer(valkostir_layer);
 
 //Valkostir punktar
-function valkostir_stopp_style_func(feature){
-    var valkostir_stops_text = new ol.style.Style({
-        // image: new ol.style.Circle({
-        //     radius: 5,
-        //     fill: new ol.style.Fill({
-        //         color: [255, 255, 255, 1]
-        //     }),
-        //     stroke: new ol.style.Stroke({
-        //         color: [0, 0, 0, 1],
-        //         width: 2,
-        //     })
-        // }),
+// function valkostir_stopp_style_func(feature){
+//     var valkostir_stops_text = new ol.style.Style({
+//         // image: new ol.style.Circle({
+//         //     radius: 5,
+//         //     fill: new ol.style.Fill({
+//         //         color: [255, 255, 255, 1]
+//         //     }),
+//         //     stroke: new ol.style.Stroke({
+//         //         color: [0, 0, 0, 1],
+//         //         width: 2,
+//         //     })
+//         // }),
             
-        text: new ol.style.Text({
-            font: '12px Calibri,sans-serif',
+//         text: new ol.style.Text({
+//             font: '12px Calibri,sans-serif',
+//             fill: new ol.style.Fill({ color: '#000' }),
+//             stroke: new ol.style.Stroke({
+//               color: '#fff', 
+//               width: 4
+//             }),
+//             text: feature.get('stopp_name'),
+//             offsetY: 15,
+//             offsetX: -20,
+//             scale: 1.2,
+//             // padding: [10,10,10,10]
+//         })
+//     })
+//     return [valkostir_stops_text]
+// }
+
+
+function valkostir_stopp_style_func_vol2(){
+    valkostir_stopp_labels.getSource().forEachFeature(function(feature){
+        if (feature.get('stopp_name') == "Ráðhúsið") {
+            
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
             fill: new ol.style.Fill({ color: '#000' }),
             stroke: new ol.style.Stroke({
               color: '#fff', 
               width: 4
             }),
             text: feature.get('stopp_name'),
-            offsetY: 20,
-            offsetX: -25,
+            offsetY: 12,
+            offsetX: -35,
             scale: 1.2,
-            // padding: [10,10,10,10]
-        })
+                // padding: [10,10,10,10]
+            });
+            
+        } else if (feature.get('stopp_name') == "HÍ") {
+            
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+            fill: new ol.style.Fill({ color: '#000' }),
+            stroke: new ol.style.Stroke({
+              color: '#fff', 
+              width: 4
+            }),
+            text: feature.get('stopp_name'),
+            offsetY: 0,
+            offsetX: -20,
+            scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+            
+        } else {
+            var textstyle = new ol.style.Text({
+                font: '12px Calibri,sans-serif',
+            fill: new ol.style.Fill({ color: '#000' }),
+            stroke: new ol.style.Stroke({
+              color: '#fff', 
+              width: 4
+            }),
+            text: feature.get('stopp_name'),
+            offsetY: 12,
+            offsetX: -45,
+            scale: 1.2,
+                // padding: [10,10,10,10]
+            });
+        }
+        feature.setStyle(new ol.style.Style({
+            text: textstyle,
+        }))
+
+        
     })
-    return [valkostir_stops_text]
 }
+            
+
+
 
 
 var valkostir_stopp = new ol.layer.VectorImage({
@@ -543,7 +604,7 @@ var valkostir_stopp_labels = new ol.layer.VectorImage({
     zIndex: 12,
     visible: false,
     title: 'ValkostirStopp',
-    style: valkostir_stopp_style_func,
+    style: valkostir_stopp_style_func_vol2,
     declutter: true
 });
 map.addLayer(valkostir_stopp_labels);
