@@ -775,7 +775,9 @@ ul {
     background-color: rgba(10, 102, 56, 0.75);
     color: green;
 } */
-
+/* #js-map {
+    overflow: auto;
+} */
 
 #js-map .ol-zoom{
     visibility: hidden;
@@ -1011,6 +1013,7 @@ ul {
     color: rgba(5, 73, 41, 1);
     font-weight: bold;
     font-size: 16px;
+    overflow: auto;
  }
 
  
@@ -1331,6 +1334,10 @@ ul {
         margin-left: 10%;
         line-height: 200%;
         letter-spacing: 2px;
+    }
+
+    .skyringarbox2{
+                width: 220px;
     }
 
 
