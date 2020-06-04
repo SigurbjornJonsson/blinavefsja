@@ -1009,6 +1009,7 @@ ul {
     max-width:300px;
     min-width:100px;
     min-height:1em;
+    max-height: 250px;
     filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
     color: rgba(5, 73, 41, 1);
     font-weight: bold;
