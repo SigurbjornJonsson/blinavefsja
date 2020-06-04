@@ -1341,7 +1341,13 @@ ul {
                 width: 220px;
     }
 
+    .modal_athugasemd_content {
+                width: 90%;
+    }
 
+    .form-popup {
+        width: 90%;
+    }
 }
 
 
