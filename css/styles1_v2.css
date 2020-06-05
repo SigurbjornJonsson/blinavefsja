@@ -479,6 +479,7 @@ nav a {
     padding: 1%;
     font-size: 20px;
     width: 35%;
+    overflow: auto;
 }
 
 .button-explain2{
