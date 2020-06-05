@@ -7,7 +7,7 @@
 { "type": "Feature", "properties": { "stopp_legg": 1, "stopp_name": "Kópavogslaug", "quad": "1" }, "geometry": { "type": "Point", "coordinates": [ -2439814.888510230928659, 9378054.77656689286232 ] } },
 { "type": "Feature", "properties": { "stopp_legg": 1, "stopp_name": "Stelluróló", "quad": "1" }, "geometry": { "type": "Point", "coordinates": [ -2441484.963095208629966, 9378107.632743129506707 ] } },
 { "type": "Feature", "properties": { "stopp_legg": 1, "stopp_name": "Kársnes", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2442219.836072403471917, 9379077.212283696979284 ] } },
-{ "type": "Feature", "properties": { "stopp_legg": 2, "stopp_name": "HR", "quad": "8" }, "geometry": { "type": "Point", "coordinates": [ -2441142.026939967647195, 9381379.322360834106803 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 2, "stopp_name": "HR", "quad": "8" }, "geometry": { "type": "Point", "coordinates": [ -2441161.210440914612263, 9381387.434684300795197 ] } },
 { "type": "Feature", "properties": { "stopp_legg": 2, "stopp_name": "Öskjuhlíð", "quad": "5" }, "geometry": { "type": "Point", "coordinates": [ -2441212.123169609345496, 9382593.331207888200879 ] } },
 { "type": "Feature", "properties": { "stopp_legg": 2, "stopp_name": "Hlíðarendi", "quad": "8" }, "geometry": { "type": "Point", "coordinates": [ -2440840.948954958934337, 9383875.466905934736133 ] } },
 { "type": "Feature", "properties": { "stopp_legg": 2, "stopp_name": "Landspítalinn", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2440734.475929814856499, 9384716.355575520545244 ] } },
