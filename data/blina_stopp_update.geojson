@@ -11,7 +11,7 @@
 { "type": "Feature", "properties": { "stopp_legg": 2, "stopp_name": "Öskjuhlíð", "quad": "5" }, "geometry": { "type": "Point", "coordinates": [ -2441212.123169609345496, 9382593.331207888200879 ] } },
 { "type": "Feature", "properties": { "stopp_legg": 2, "stopp_name": "Hlíðarendi", "quad": "8" }, "geometry": { "type": "Point", "coordinates": [ -2440840.948954958934337, 9383875.466905934736133 ] } },
 { "type": "Feature", "properties": { "stopp_legg": 2, "stopp_name": "Landspítalinn", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2440734.475929814856499, 9384716.355575520545244 ] } },
-{ "type": "Feature", "properties": { "stopp_legg": 3, "stopp_name": "BSÍ", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2441768.223927839659154, 9385018.727370761334896 ] } },
+{ "type": "Feature", "properties": { "stopp_legg": 3, "stopp_name": "BSÍ", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2441626.763801423832774, 9384793.219900930300355 ] } },
 { "type": "Feature", "properties": { "stopp_legg": 3, "stopp_name": "HÍ", "quad": "5" }, "geometry": { "type": "Point", "coordinates": [ -2443122.647179123014212, 9385954.36905494146049 ] } },
 { "type": "Feature", "properties": { "stopp_legg": 4, "stopp_name": "Tjörnin", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2442362.576526691671461, 9386263.693609839305282 ] } },
 { "type": "Feature", "properties": { "stopp_legg": 4, "stopp_name": "Lækjartorg", "quad": "1" }, "geometry": { "type": "Point", "coordinates": [ -2441882.487278896849602, 9387328.485672973096371 ] } },
