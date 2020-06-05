@@ -497,6 +497,7 @@ nav a {
     padding: 1%;
     font-size: 20px;
     width: 35%;
+    overflow: auto;
 }
 
 .button-explain3{
@@ -514,6 +515,7 @@ nav a {
     padding: 1%;
     font-size: 20px;
     width: 35%;
+    overflow: auto;
 }
 
 .button-explain4{
@@ -531,6 +533,7 @@ nav a {
     padding: 1%;
     font-size: 20px;
     width: 35%;
+    overflow: auto;
 }
 
 .button-explain5{
@@ -548,6 +551,7 @@ nav a {
     padding: 1%;
     font-size: 20px;
     width: 35%;
+    overflow: auto;
 }
 
 .button-explain6{
@@ -565,6 +569,7 @@ nav a {
     padding: 1%;
     font-size: 20px;
     width: 35%;
+    overflow: auto;
 }
 .btn-close1{
     background-color: rgb(201, 201, 201);
