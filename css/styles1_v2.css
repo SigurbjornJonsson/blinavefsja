@@ -1348,11 +1348,15 @@ ul {
     }
 
     .modal_athugasemd_content {
-        width: 80%;
+        width: 90%;
     }
 
     .form-popup {
-        width: 80%;
+        width: 90%;
+    }
+
+    .modal_meginmal_content {
+        width: 90%;
     }
 }
 
