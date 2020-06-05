@@ -3,8 +3,8 @@
 "name": "valkostir_stop_update",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
 "features": [
-{ "type": "Feature", "properties": { "id": 3, "stopp_name": "Ráðhúsið", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2442534.685041083488613, 9387024.862851614132524 ] } },
-{ "type": "Feature", "properties": { "id": 1, "stopp_name": "Vísindagarðar", "quad": "6" }, "geometry": { "type": "Point", "coordinates": [ -2443184.60797836817801, 9384766.518681554123759 ] } },
-{ "type": "Feature", "properties": { "id": 2, "stopp_name": "HÍ", "quad": "3" }, "geometry": { "type": "Point", "coordinates": [ -2443522.865926503203809, 9385597.810625435784459 ] } }
+{ "type": "Feature", "properties": { "id": 1, "stopp_name": "Vísindagarðar", "quad": "6" }, "geometry": { "type": "Point", "coordinates": [ -2443015.850536503829062, 9384574.498128129169345 ] } },
+{ "type": "Feature", "properties": { "id": 2, "stopp_name": "HÍ", "quad": "3" }, "geometry": { "type": "Point", "coordinates": [ -2443522.865926503203809, 9385597.810625435784459 ] } },
+{ "type": "Feature", "properties": { "id": 3, "stopp_name": "Ráðhúsið", "quad": "2" }, "geometry": { "type": "Point", "coordinates": [ -2442534.685041083488613, 9387024.862851614132524 ] } }
 ]
 }
