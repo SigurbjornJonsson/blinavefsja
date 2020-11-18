@@ -429,6 +429,8 @@ nav a {
     top: 5px;
     left: 85px;
     width: 300px;
+    max-height: 80%;
+    overflow: auto;
 }
 
 
